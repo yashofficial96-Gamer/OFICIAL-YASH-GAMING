@@ -1,181 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090909">
-  <meta name="description" content="YASH GAMING - Free Fire gameplay, tutorials, gaming news and community.">
-  <title>YASH GAMING | Free Fire Community</title>
-  <style>
-    :root{--bg:#090909;--panel:#151515;--red:#ff3030;--red2:#b90018;--text:#f5f5f5;--muted:#aaa;--line:#292929}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none} button,input,textarea,select{font:inherit}
-    .wrap{width:min(1120px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:10;background:#090909ed;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
-    nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-size:1.25rem;font-weight:900;letter-spacing:1px}.brand span,.red{color:var(--red)}
-    .navlinks{display:flex;gap:17px;align-items:center;font-size:.9rem;color:#ddd}.navlinks a:hover{color:var(--red)}
-    .menu{display:none;background:transparent;border:1px solid var(--line);color:white;padding:7px 10px;border-radius:8px}
-    .hero{padding:76px 0 60px;background:radial-gradient(ellipse at 85% 30%,#6d071c55,transparent 42%),linear-gradient(135deg,#111,#090909 65%);border-bottom:1px solid var(--line)}
-    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.eyebrow{color:var(--red);font-weight:800;letter-spacing:3px;font-size:.78rem}
-    h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;margin:15px 0}.hero p{color:#c4c4c4;max-width:570px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.btn{display:inline-block;border:0;border-radius:8px;padding:12px 18px;font-weight:800;cursor:pointer;background:var(--red);color:white}
-    .btn:hover{filter:brightness(1.15);transform:translateY(-1px)}.btn.outline{background:transparent;border:1px solid #555}.hero-card{border:1px solid #51202a;background:linear-gradient(145deg,#211014,#111);padding:25px;border-radius:18px;box-shadow:0 15px 55px #0008}
-    .hero-card .symbol{font-size:5rem;text-align:center;line-height:1.2}.hero-card h2{text-align:center;margin:8px 0}.hero-card p{text-align:center;margin:0 auto}
-    section{padding:55px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:22px}
-    h2{font-size:1.8rem;margin:0}.section-head p{color:var(--muted);margin:4px 0 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}.card h3{margin:8px 0}.card p{color:var(--muted);margin:5px 0 12px}.thumb{height:145px;border-radius:10px;background:linear-gradient(135deg,#3b0712,#171717);display:grid;place-items:center;font-size:2.5rem}
-    .tag{display:inline-block;color:#ff7777;background:#401019;padding:3px 9px;border-radius:20px;font-size:.75rem;font-weight:700}
-    .list{display:grid;gap:12px}.item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:10px}.item p{margin:2px 0;color:var(--muted);font-size:.9rem}
-    .socials{display:flex;gap:10px;flex-wrap:wrap}.socials a{border:1px solid #4a252b;border-radius:9px;padding:10px 14px;background:#1b1012}
-    form{display:grid;gap:12px;max-width:650px}input,textarea,select{width:100%;padding:12px;background:#101010;color:white;border:1px solid #383838;border-radius:8px}textarea{min-height:120px;resize:vertical}
-    .note{font-size:.85rem;color:var(--muted)}footer{padding:28px 0;color:var(--muted);text-align:center}
-    .admin-box{display:none;margin-top:18px}.admin-box.show{display:block}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .admin-actions{display:flex;gap:10px;flex-wrap:wrap}.status{color:#ff8888;font-size:.9rem}
-    @media(max-width:760px){.hero-grid{grid-template-columns:1fr}.hero{padding:55px 0}.grid{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#101010;padding:18px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.section-head{align-items:start;flex-direction:column}.admin-grid{grid-template-columns:1fr}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="YASH GAMING - Free Fire gameplay, tutorials, Reels and gaming updates.">
+<title>YASH GAMING | Free Fire Community</title>
+<style>
+:root{--bg:#090909;--panel:#151515;--red:#ff3030;--text:#f5f5f5;--muted:#aaa;--line:#292929}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1120px,92%);margin:auto}
+.topbar{position:sticky;top:0;z-index:20;background:#090909ed;border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+nav{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:14px}.brand{font-size:1.25rem;font-weight:900;letter-spacing:1px}.brand span,.red{color:var(--red)}
+.navlinks{display:flex;gap:17px;align-items:center;font-size:.9rem;color:#ddd}.navlinks a:hover{color:var(--red)}.menu{display:none;background:transparent;border:1px solid var(--line);color:white;padding:7px 10px;border-radius:8px}
+.hero{padding:76px 0 60px;background:radial-gradient(ellipse at 85% 30%,#6d071c66,transparent 42%),linear-gradient(135deg,#111,#090909 65%);border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.eyebrow{color:var(--red);font-weight:800;letter-spacing:3px;font-size:.78rem}
+h1{font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;margin:15px 0}.hero p{color:#c4c4c4;max-width:570px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}.btn{display:inline-block;border:0;border-radius:8px;padding:12px 18px;font-weight:800;cursor:pointer;background:var(--red);color:white}.btn:hover{filter:brightness(1.15);transform:translateY(-1px)}.btn.outline{background:transparent;border:1px solid #555}
+.hero-card{border:1px solid #51202a;background:linear-gradient(145deg,#211014,#111);padding:25px;border-radius:18px;box-shadow:0 15px 55px #0008}.symbol{font-size:5rem;text-align:center;line-height:1.2}.hero-card h2,.hero-card p{text-align:center}.hero-card p{color:#bbb}
+section{padding:55px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin-bottom:22px}h2{font-size:1.8rem;margin:0}.section-head p{color:var(--muted);margin:4px 0 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;min-width:0}.card h3{margin:8px 0}.card p{color:var(--muted);margin:5px 0 12px}
+.thumb{min-height:145px;border-radius:10px;background:linear-gradient(135deg,#3b0712,#171717);display:grid;place-items:center;font-size:2.5rem}.tag{display:inline-block;color:#ff9999;background:#401019;padding:3px 9px;border-radius:20px;font-size:.75rem;font-weight:700}
+.video-frame{width:100%;aspect-ratio:16/9;border:0;border-radius:10px;background:#000}.reel-frame{width:100%;min-height:450px;border:0;border-radius:10px;background:#000}.reel-card{overflow:hidden}.reel-link{display:inline-block;margin-top:10px;color:#ff8585;font-weight:700}
+.list{display:grid;gap:12px}.item{padding:14px;background:var(--panel);border:1px solid var(--line);border-radius:10px}.item p{margin:2px 0;color:var(--muted);font-size:.9rem}
+.socials{display:flex;gap:10px;flex-wrap:wrap}.socials a{border:1px solid #4a252b;border-radius:9px;padding:10px 14px;background:#1b1012}
+form{display:grid;gap:12px;max-width:650px}input,textarea{width:100%;padding:12px;background:#101010;color:white;border:1px solid #383838;border-radius:8px}textarea{min-height:100px}
+.note{font-size:.85rem;color:var(--muted)}footer{padding:28px 0;color:var(--muted);text-align:center}
+.admin-box{display:none;margin-top:18px}.admin-box.show{display:block}.admin-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.admin-grid>div{display:grid;gap:9px}.admin-actions{display:flex;gap:10px;flex-wrap:wrap}.status{color:#ffaaaa;font-size:.9rem}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr}.hero{padding:55px 0}.grid{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#101010;padding:18px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.section-head{align-items:start;flex-direction:column}.admin-grid{grid-template-columns:1fr}.reel-frame{min-height:380px}}
+</style>
 </head>
 <body>
-<header class="topbar">
-  <nav class="wrap">
-    <a class="brand" href="#home">YASH <span>GAMING</span></a>
-    <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
-    <div class="navlinks" id="navlinks">
-      <a href="#home">Home</a><a href="#videos">Videos</a><a href="#reels">Reels</a><a href="#guides">Guides</a><a href="#news">News</a><a href="#community">Community</a><a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
-
+<header class="topbar"><nav class="wrap">
+<a class="brand" href="#home">YASH <span>GAMING</span></a>
+<button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+<div class="navlinks" id="navlinks">
+<a href="#home">Home</a><a href="#videos">Videos</a><a href="#reels">Reels</a><a href="#guides">Guides</a><a href="#news">News</a><a href="#community">Community</a><a href="#contact">Contact</a>
+</div></nav></header>
 <main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <div class="eyebrow">FREE FIRE • GAMEPLAY • COMMUNITY</div>
-        <h1>PLAY BOLD.<br><span class="red">PLAY LIKE YASH.</span></h1>
-        <p>Welcome to YASH GAMING — your place for Free Fire gameplay, headshot tips, sensitivity settings, custom HUD guides and gaming updates.</p>
-        <div class="actions">
-          <a class="btn" href="#videos">WATCH VIDEOS</a>
-          <a class="btn outline" href="https://www.instagram.com/yash.official9616/" target="_blank" rel="noopener">FOLLOW ON INSTAGRAM</a>
-        </div>
-      </div>
-      <div class="hero-card"><div class="symbol">🔥</div><h2>YASH GAMING</h2><p>Epic gameplay. Useful guides. One growing community.</p></div>
-    </div>
-  </section>
+<section class="hero" id="home"><div class="wrap hero-grid"><div>
+<div class="eyebrow">FREE FIRE • GAMEPLAY • COMMUNITY</div>
+<h1>PLAY BOLD.<br><span class="red">PLAY LIKE YASH.</span></h1>
+<p>Welcome to YASH GAMING — Free Fire gameplay, headshot practice, sensitivity and HUD guides, Reels and gaming updates.</p>
+<div class="actions">
+<a class="btn" href="#videos">WATCH VIDEOS</a>
+<a class="btn outline" href="https://www.youtube.com/@official.yash_96" target="_blank" rel="noopener">SUBSCRIBE ON YOUTUBE</a>
+<a class="btn outline" href="https://www.instagram.com/yash.official9616/" target="_blank" rel="noopener">FOLLOW ON INSTAGRAM</a>
+</div></div><div class="hero-card"><div class="symbol">🔥</div><h2>YASH GAMING</h2><p>Epic gameplay. Useful guides. One growing community.</p></div></div></section>
 
-  <section id="videos"><div class="wrap">
-    <div class="section-head"><div><h2>Latest <span class="red">YouTube Videos</span></h2><p>Add your latest gameplay and Shorts here.</p></div><a class="btn outline" id="youtubeChannel" href="https://www.youtube.com/" target="_blank" rel="noopener">Visit YouTube</a></div>
-    <div class="grid" id="videoGrid"></div>
-  </div></section>
+<section id="videos"><div class="wrap">
+<div class="section-head"><div><h2>Latest <span class="red">YouTube Videos</span></h2><p>Watch the videos added by YASH GAMING.</p></div>
+<a class="btn outline" href="https://www.youtube.com/@official.yash_96" target="_blank" rel="noopener">VISIT CHANNEL</a></div>
+<div class="grid" id="videoGrid"></div>
+<p class="note">To show your actual videos here, add each YouTube video URL in the Update Panel below. Your channel link is already connected.</p>
+</div></section>
 
-  <section id="reels"><div class="wrap">
-    <div class="section-head"><div><h2>Instagram <span class="red">Reels</span></h2><p>Watch clips and follow for regular updates.</p></div></div>
-    <div class="card"><h3>@yash.official9616</h3><p>Free Fire clips, highlights and updates.</p><a class="btn" href="https://www.instagram.com/yash.official9616/" target="_blank" rel="noopener">OPEN INSTAGRAM</a></div>
-  </div></section>
+<section id="reels"><div class="wrap">
+<div class="section-head"><div><h2>Instagram <span class="red">Reels</span></h2><p>Watch your Free Fire clips and highlights.</p></div>
+<a class="btn outline" href="https://www.instagram.com/yash.official9616/" target="_blank" rel="noopener">OPEN INSTAGRAM</a></div>
+<div class="grid" id="reelGrid"></div>
+<p class="note">Add each Reel's share URL in the Update Panel. Instagram may ask visitors to open the Reel in Instagram.</p>
+</div></section>
 
-  <section id="guides"><div class="wrap">
-    <div class="section-head"><div><h2>Free Fire <span class="red">Guides</span></h2><p>Helpful tutorials for players at every level.</p></div></div>
-    <div class="grid">
-      <article class="card"><div class="thumb">🎯</div><span class="tag">SETTINGS</span><h3>Sensitivity Settings</h3><p>Learn how to test and adjust sensitivity for your device and play style.</p></article>
-      <article class="card"><div class="thumb">🎮</div><span class="tag">CUSTOM HUD</span><h3>Custom HUD Guide</h3><p>Understand button placement, comfort and control layout basics.</p></article>
-      <article class="card"><div class="thumb">🔥</div><span class="tag">SKILLS</span><h3>Headshot & Movement Tips</h3><p>Practice aim, movement and close-range decision making.</p></article>
-    </div>
-  </div></section>
+<section id="guides"><div class="wrap">
+<div class="section-head"><div><h2>Free Fire <span class="red">Guides</span></h2><p>Helpful tutorials for players at every level.</p></div></div>
+<div class="grid">
+<article class="card"><div class="thumb">🎯</div><span class="tag">SETTINGS</span><h3>Sensitivity Settings</h3><p>Test sensitivity gradually. Adjust General and scope settings to suit your device, screen size and control style.</p></article>
+<article class="card"><div class="thumb">🎮</div><span class="tag">CUSTOM HUD</span><h3>Custom HUD Guide</h3><p>Place buttons where your fingers reach comfortably. Practice in training mode before changing your full layout.</p></article>
+<article class="card"><div class="thumb">🔥</div><span class="tag">SKILLS</span><h3>Headshot & Movement Tips</h3><p>Practice drag aim, crosshair placement, gloo-wall timing and movement in short daily sessions.</p></article>
+</div></div></section>
 
-  <section id="news"><div class="wrap">
-    <div class="section-head"><div><h2>Gaming <span class="red">News & Updates</span></h2><p>Updates posted by the YASH GAMING team.</p></div></div>
-    <div class="list" id="newsList"></div>
-  </div></section>
+<section id="news"><div class="wrap">
+<div class="section-head"><div><h2>Gaming <span class="red">News & Updates</span></h2><p>Updates and announcements posted by YASH GAMING.</p></div></div>
+<div class="list" id="newsList"></div>
+<p class="note">News is not automatically fetched from Garena. Add verified updates through the Update Panel.</p>
+</div></section>
 
-  <section id="community"><div class="wrap">
-    <div class="section-head"><div><h2>Join the <span class="red">Community</span></h2><p>Connect, share feedback and grow together.</p></div></div>
-    <div class="card"><h3>Be part of YASH GAMING</h3><p>Follow the social pages and send your suggestions. Community groups and tournaments can be added here later.</p>
-      <div class="socials"><a href="https://www.instagram.com/yash.official9616/" target="_blank" rel="noopener">📸 Instagram</a><a href="https://www.youtube.com/" target="_blank" rel="noopener">▶ YouTube</a></div>
-    </div>
-  </div></section>
+<section id="community"><div class="wrap">
+<div class="section-head"><div><h2>Join the <span class="red">Community</span></h2><p>Connect, share feedback and grow together.</p></div></div>
+<div class="card"><h3>Be part of YASH GAMING</h3><p>Follow the social pages and send your suggestions. Community groups and tournaments can be added later.</p>
+<div class="socials"><a href="https://www.instagram.com/yash.official9616/" target="_blank" rel="noopener">📸 Instagram</a><a href="https://www.youtube.com/@official.yash_96" target="_blank" rel="noopener">▶ YouTube</a></div></div>
+</div></section>
 
-  <section id="contact"><div class="wrap">
-    <div class="section-head"><div><h2>Contact <span class="red">YASH</span></h2><p>For feedback, questions and collaboration enquiries.</p></div></div>
-    <form id="contactForm">
-      <input id="visitorName" placeholder="Your name" required>
-      <input id="visitorEmail" type="email" placeholder="Your email" required>
-      <textarea id="visitorMessage" placeholder="Write your message..." required></textarea>
-      <button class="btn" type="submit">PREPARE MESSAGE</button>
-      <p class="note">This starter form opens your email app. A real online inbox requires a form service or backend.</p>
-    </form>
-  </div></section>
+<section id="contact"><div class="wrap">
+<div class="section-head"><div><h2>Contact <span class="red">YASH</span></h2><p>For feedback, questions and collaboration enquiries.</p></div></div>
+<form id="contactForm"><input id="visitorName" placeholder="Your name" required><input id="visitorEmail" type="email" placeholder="Your email" required><textarea id="visitorMessage" placeholder="Write your message..." required></textarea><button class="btn" type="submit">PREPARE MESSAGE</button>
+<p class="note">The form opens the visitor's email app. Replace the email address in the code with your real email before publishing.</p></form>
+</div></section>
 
-  <section id="admin"><div class="wrap">
-    <div class="section-head"><div><h2>Website <span class="red">Update Panel</span></h2><p>Starter admin demo for adding video links and news on this device.</p></div><button class="btn outline" id="adminToggle">OPEN UPDATE PANEL</button></div>
-    <div class="card admin-box" id="adminBox">
-      <p class="status">Demo only: changes are saved in this browser on this device. This is not a secure public admin login and does not sync to visitors or other devices.</p>
-      <div class="admin-grid">
-        <div><h3>Add YouTube video</h3><input id="videoTitle" placeholder="Video title"><input id="videoUrl" placeholder="YouTube URL (youtube.com/watch?v=...)"><button class="btn" id="addVideo" type="button">ADD VIDEO</button></div>
-        <div><h3>Add gaming news</h3><input id="newsTitle" placeholder="News heading"><input id="newsText" placeholder="Short update"><button class="btn" id="addNews" type="button">ADD NEWS</button></div>
-      </div>
-      <div class="admin-actions" style="margin-top:18px"><button class="btn outline" id="resetData" type="button">RESET DEMO CONTENT</button></div>
-      <p class="note" id="adminStatus" aria-live="polite"></p>
-    </div>
-  </div></section>
+<section id="admin"><div class="wrap">
+<div class="section-head"><div><h2>Website <span class="red">Update Panel</span></h2><p>Add videos, Reels and news from this browser.</p></div><button class="btn outline" id="adminToggle" type="button">OPEN UPDATE PANEL</button></div>
+<div class="card admin-box" id="adminBox">
+<p class="status">Important: this is a local demo panel, not a secure admin system. Changes are saved only in this browser/device and will NOT publish for other visitors. To publish updates for everyone, edit this file in GitHub and commit the changes.</p>
+<div class="admin-grid">
+<div><h3>Add YouTube video</h3><input id="videoTitle" placeholder="Video title"><input id="videoUrl" placeholder="Full YouTube video URL"><button class="btn" id="addVideo" type="button">ADD VIDEO</button></div>
+<div><h3>Add Instagram Reel</h3><input id="reelTitle" placeholder="Reel title"><input id="reelUrl" placeholder="Instagram Reel share URL"><button class="btn" id="addReel" type="button">ADD REEL</button></div>
+<div><h3>Add gaming news</h3><input id="newsTitle" placeholder="News heading"><input id="newsText" placeholder="Short verified update"><button class="btn" id="addNews" type="button">ADD NEWS</button></div>
+</div>
+<div class="admin-actions" style="margin-top:18px"><button class="btn outline" id="resetData" type="button">RESET LOCAL DEMO CONTENT</button></div><p class="note" id="adminStatus" aria-live="polite"></p>
+</div></div></section>
 </main>
-
 <footer><div class="wrap">© <span id="year"></span> YASH GAMING. Made for the Free Fire community.<br><span class="note">Fan-made gaming creator website. Not affiliated with Garena.</span></div></footer>
 
 <script>
-  const defaultVideos = [
-    {title:"My Free Fire Gameplay",url:"https://www.youtube.com/",desc:"Replace this sample with your latest video."},
-    {title:"Headshot Practice Highlights",url:"https://www.youtube.com/",desc:"Add your best gameplay highlight."},
-    {title:"Free Fire Tips & Tricks",url:"https://www.youtube.com/",desc:"Share a useful tutorial with players."}
-  ];
-  const defaultNews = [
-    {title:"Welcome to YASH GAMING",text:"The website is live as a starter. Check back for gameplay, guides and updates."},
-    {title:"What should we post next?",text:"Send your ideas through the contact section or Instagram."}
-  ];
-  const load = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch(e) { return fallback; } };
-  let videos = load("yg_videos", defaultVideos);
-  let news = load("yg_news", defaultNews);
-  const videoGrid = document.getElementById("videoGrid");
-  const newsList = document.getElementById("newsList");
-  function safeUrl(url){ try { const u = new URL(url); return ["https:","http:"].includes(u.protocol) ? u.href : "https://www.youtube.com/"; } catch(e){ return "https://www.youtube.com/"; } }
-  function renderVideos(){
-    videoGrid.innerHTML = "";
-    videos.forEach(v => {
-      const card = document.createElement("article"); card.className = "card";
-      const thumb = document.createElement("div"); thumb.className="thumb"; thumb.textContent="▶";
-      const tag = document.createElement("span"); tag.className="tag"; tag.textContent="GAMEPLAY";
-      const h = document.createElement("h3"); h.textContent=v.title;
-      const p = document.createElement("p"); p.textContent=v.desc || "Watch the video.";
-      const a = document.createElement("a"); a.className="btn"; a.href=safeUrl(v.url); a.target="_blank"; a.rel="noopener"; a.textContent="WATCH VIDEO";
-      card.append(thumb,tag,h,p,a); videoGrid.append(card);
-    });
-  }
-  function renderNews(){
-    newsList.innerHTML="";
-    news.forEach(n => { const item=document.createElement("div"); item.className="item"; const left=document.createElement("div"); const h=document.createElement("strong"); h.textContent=n.title; const p=document.createElement("p"); p.textContent=n.text; left.append(h,p); item.append(left); newsList.append(item); });
-  }
-  renderVideos(); renderNews(); document.getElementById("year").textContent=new Date().getFullYear();
-  document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
-  document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navlinks").classList.remove("open")));
-  document.getElementById("adminToggle").addEventListener("click",()=>document.getElementById("adminBox").classList.toggle("show"));
-  document.getElementById("addVideo").addEventListener("click",()=>{
-    const title=document.getElementById("videoTitle").value.trim(), url=document.getElementById("videoUrl").value.trim();
-    if(!title || !url){document.getElementById("adminStatus").textContent="Please enter both a title and a YouTube URL.";return;}
-    videos.unshift({title,url,desc:"New video added from this browser."}); localStorage.setItem("yg_videos",JSON.stringify(videos)); renderVideos();
-    document.getElementById("videoTitle").value="";document.getElementById("videoUrl").value="";document.getElementById("adminStatus").textContent="Video added on this device.";
-  });
-  document.getElementById("addNews").addEventListener("click",()=>{
-    const title=document.getElementById("newsTitle").value.trim(), text=document.getElementById("newsText").value.trim();
-    if(!title || !text){document.getElementById("adminStatus").textContent="Please enter both a heading and update.";return;}
-    news.unshift({title,text});localStorage.setItem("yg_news",JSON.stringify(news));renderNews();
-    document.getElementById("newsTitle").value="";document.getElementById("newsText").value="";document.getElementById("adminStatus").textContent="News added on this device.";
-  });
-  document.getElementById("resetData").addEventListener("click",()=>{
-    if(confirm("Reset the demo videos and news on this device?")){localStorage.removeItem("yg_videos");localStorage.removeItem("yg_news");videos=defaultVideos;news=defaultNews;renderVideos();renderNews();document.getElementById("adminStatus").textContent="Demo content restored.";}
-  });
-  document.getElementById("contactForm").addEventListener("submit",e=>{
-    e.preventDefault();
-    const name=document.getElementById("visitorName").value.trim(), email=document.getElementById("visitorEmail").value.trim(), message=document.getElementById("visitorMessage").value.trim();
-    const subject=encodeURIComponent("YASH GAMING website enquiry");
-    const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\nMessage:\n"+message);
-    window.location.href="mailto:YOUR_EMAIL@example.com?subject="+subject+"&body="+body;
-  });
+const YOUTUBE_CHANNEL="https://www.youtube.com/@official.yash_96";
+const INSTAGRAM_PROFILE="https://www.instagram.com/yash.official9616/";
+const defaultVideos=[];
+const defaultReels=[
+ {title:"Free Fire Reel 1",url:"https://www.instagram.com/reel/Dfpq5auKLle/"},
+ {title:"Free Fire Reel 2",url:"https://www.instagram.com/reel/Dfi5w6bv-6C/"},
+ {title:"Free Fire Reel 3",url:"https://www.instagram.com/reel/DfiGnUQvbM3/"}
+];
+const defaultNews=[
+ {title:"Welcome to YASH GAMING",text:"The website is live. Follow the YouTube and Instagram pages for gameplay and creator updates."},
+ {title:"Free Fire practice tip",text:"Use Training mode to practice aim, movement and your preferred HUD before ranked matches."}
+];
+const load=(key,fallback)=>{try{const value=JSON.parse(localStorage.getItem(key));return Array.isArray(value)?value:fallback}catch(e){return fallback}};
+let videos=load("yg_videos_v2",defaultVideos),reels=load("yg_reels_v2",defaultReels),news=load("yg_news_v2",defaultNews);
+if(!reels.length)reels=defaultReels.slice();
+const $=id=>document.getElementById(id);
+function youtubeId(value){
+ try{const u=new URL(value);if(u.hostname.includes("youtu.be"))return u.pathname.split("/").filter(Boolean)[0]||"";if(u.hostname.includes("youtube.com")){if(u.searchParams.get("v"))return u.searchParams.get("v");const parts=u.pathname.split("/").filter(Boolean);if(["shorts","embed","live"].includes(parts[0]))return parts[1]||""}}catch(e){}return "";
+}
+function renderVideos(){
+ $("videoGrid").replaceChildren();
+ if(!videos.length){const c=document.createElement("article");c.className="card";c.innerHTML='<div class="thumb">▶</div><h3>Your videos will appear here</h3><p>Add a YouTube video URL in the Update Panel, or edit the video list in GitHub to publish it for everyone.</p><a class="btn" href="'+YOUTUBE_CHANNEL+'" target="_blank" rel="noopener">VISIT YOUTUBE CHANNEL</a>';$("videoGrid").append(c);return}
+ videos.forEach(v=>{const id=youtubeId(v.url);const card=document.createElement("article");card.className="card";if(id){const frame=document.createElement("iframe");frame.className="video-frame";frame.src="https://www.youtube-nocookie.com/embed/"+encodeURIComponent(id);frame.title=v.title||"YASH GAMING video";frame.loading="lazy";frame.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";frame.allowFullscreen=true;card.append(frame)}else{const thumb=document.createElement("div");thumb.className="thumb";thumb.textContent="▶";card.append(thumb)}
+ const h=document.createElement("h3");h.textContent=v.title||"Free Fire video";card.append(h);if(!id){const p=document.createElement("p");p.textContent="This link could not be read as a YouTube video URL.";card.append(p)}const a=document.createElement("a");a.className="btn";a.href=v.url;a.target="_blank";a.rel="noopener";a.textContent="WATCH ON YOUTUBE";card.append(a);$("videoGrid").append(card)});
+}
+function renderReels(){
+ $("reelGrid").replaceChildren();
+ if(!reels.length){const c=document.createElement("article");c.className="card";c.innerHTML='<div class="thumb">📸</div><h3>Your Reels will appear here</h3><p>Add a public Instagram Reel share URL in the Update Panel.</p><a class="btn" href="'+INSTAGRAM_PROFILE+'" target="_blank" rel="noopener">VISIT INSTAGRAM</a>';$("reelGrid").append(c);return}
+ reels.forEach(r=>{const card=document.createElement("article");card.className="card reel-card";const url=validInstagramUrl(r.url);if(url){const block=document.createElement("blockquote");block.className="instagram-media";block.setAttribute("data-instgrm-permalink",url);block.setAttribute("data-instgrm-version","14");block.style.cssText="background:#111;border:0;margin:0 auto;max-width:540px;width:100%";card.append(block)}const h=document.createElement("h3");h.textContent=r.title||"YASH GAMING Reel";card.append(h);const a=document.createElement("a");a.className="reel-link";a.href=url||INSTAGRAM_PROFILE;a.target="_blank";a.rel="noopener";a.textContent="OPEN REEL ON INSTAGRAM ↗";card.append(a);$("reelGrid").append(card)});
+ if(reels.length){const s=document.createElement("script");s.async=true;s.src="https://www.instagram.com/embed.js";s.onload=()=>{if(window.instgrm&&window.instgrm.Embeds)window.instgrm.Embeds.process()};document.body.append(s)}
+}
+function validInstagramUrl(value){try{const u=new URL(value);return u.protocol==="https:"&&u.hostname==="www.instagram.com"&&/^\/(reel|p|tv)\//.test(u.pathname)?u.href:""}catch(e){return ""}}
+function renderNews(){$("newsList").replaceChildren();news.forEach(n=>{const item=document.createElement("article");item.className="item";const h=document.createElement("strong");h.textContent=n.title;const p=document.createElement("p");p.textContent=n.text;item.append(h,p);$("newsList").append(item)})}
+function saveAll(){localStorage.setItem("yg_videos_v2",JSON.stringify(videos));localStorage.setItem("yg_reels_v2",JSON.stringify(reels));localStorage.setItem("yg_news_v2",JSON.stringify(news))}
+renderVideos();renderReels();renderNews();$("year").textContent=new Date().getFullYear();
+$("menuBtn").addEventListener("click",()=>$("navlinks").classList.toggle("open"));
+document.querySelectorAll(".navlinks a").forEach(a=>a.addEventListener("click",()=>$("navlinks").classList.remove("open")));
+$("adminToggle").addEventListener("click",()=>$("adminBox").classList.toggle("show"));
+$("addVideo").addEventListener("click",()=>{const title=$("videoTitle").value.trim(),url=$("videoUrl").value.trim();if(!title||!youtubeId(url)){$("adminStatus").textContent="Enter a title and a valid YouTube video URL (not just the channel URL).";return}videos.unshift({title,url});saveAll();renderVideos();$("videoTitle").value="";$("videoUrl").value="";$("adminStatus").textContent="Video added in this browser only. Publish it through GitHub for all visitors."});
+$("addReel").addEventListener("click",()=>{const title=$("reelTitle").value.trim(),url=validInstagramUrl($("reelUrl").value.trim());if(!title||!url){$("adminStatus").textContent="Enter a title and a public Instagram Reel URL, such as instagram.com/reel/...";return}reels.unshift({title,url});saveAll();renderReels();$("reelTitle").value="";$("reelUrl").value="";$("adminStatus").textContent="Reel added in this browser only. Publish it through GitHub for all visitors."});
+$("addNews").addEventListener("click",()=>{const title=$("newsTitle").value.trim(),text=$("newsText").value.trim();if(!title||!text){$("adminStatus").textContent="Enter both a news heading and update.";return}news.unshift({title,text});saveAll();renderNews();$("newsTitle").value="";$("newsText").value="";$("adminStatus").textContent="News added in this browser only. Publish it through GitHub for all visitors."});
+$("resetData").addEventListener("click",()=>{if(confirm("Reset locally saved videos, Reels and news on this device?")){["yg_videos_v2","yg_reels_v2","yg_news_v2"].forEach(k=>localStorage.removeItem(k));videos=defaultVideos;reels=defaultReels;news=defaultNews;renderVideos();renderReels();renderNews();$("adminStatus").textContent="Local demo content reset."}});
+$("contactForm").addEventListener("submit",e=>{e.preventDefault();const name=$("visitorName").value.trim(),email=$("visitorEmail").value.trim(),message=$("visitorMessage").value.trim();const subject=encodeURIComponent("YASH GAMING website enquiry"),body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\nMessage:\n"+message);window.location.href="mailto:YOUR_EMAIL@example.com?subject="+subject+"&body="+body});
 </script>
-</body>
-</html>
+</body></html>
